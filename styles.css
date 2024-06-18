@@ -1,0 +1,46 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-player {
+    padding: 20px;
+}
+
+.video-list {
+    width: 200px;
+    border-left: 1px solid #ddd;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    max-height: 350px; /* Altura fixa para a lista de vídeos */
+}
+
+#video-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#video-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#video-list li:hover {
+    background-color: #f9f9f9;
+}
