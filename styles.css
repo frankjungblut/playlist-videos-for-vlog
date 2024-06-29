@@ -46,10 +46,6 @@ video {
 .video-list {
     width: 200px;
     border-left: 1px solid #cccbcb;
-    /* Quando a lista de videos for maior 
-    overflow-y: auto;  Adiciona barra de rolagem vertical 
-    max-height: 350px;  Altura fixa para a lista de vídeos 
-    */
 }
 
 #video-list {
@@ -72,4 +68,57 @@ video {
     background-color: #f9f9f9;
     color: #a953ffbb;
     border-radius: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    .video-player, .video-list {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .video-player iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    .video-list {
+        border-left: none;
+        border-top: 1px solid #cccbcb;
+        padding-top: 20px;
+    }
+
+    #video-list li {
+        padding: 8px;
+    }
+
+    #video-list li:hover,
+    #video-list li.active {
+        background-color: #f0f0f0;
+        color: #a953ffbb;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-player iframe {
+        height: 200px;
+    }
 }
