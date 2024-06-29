@@ -1,21 +1,42 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     background-color: #f0f0f0;
+}
+
+video {
+    /*Background video*/
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(50%);
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    background-color: #fff;
+    background-color: #a953ffbb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    /* Adicionado para centralizar verticalmente */
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #cccbcb;
 }
 
 .video-player {
@@ -24,23 +45,31 @@ body {
 
 .video-list {
     width: 200px;
-    border-left: 1px solid #ddd;
-    overflow-y: auto; /* Adiciona barra de rolagem vertical */
-    max-height: 350px; /* Altura fixa para a lista de vídeos */
+    border-left: 1px solid #cccbcb;
+    /* Quando a lista de videos for maior 
+    overflow-y: auto;  Adiciona barra de rolagem vertical 
+    max-height: 350px;  Altura fixa para a lista de vídeos 
+    */
 }
 
 #video-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    border-radius: 20px;
+    color: #cccbcb;
+    font-weight: bold;
 }
 
 #video-list li {
     padding: 10px;
     cursor: pointer;
-    border-bottom: 1px solid #ddd;
+
 }
 
-#video-list li:hover {
+#video-list li:hover,
+#video-list li.active {
     background-color: #f9f9f9;
+    color: #a953ffbb;
+    border-radius: 20px;
 }
